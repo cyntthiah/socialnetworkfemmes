@@ -9,6 +9,7 @@ import { UserComponent } from './user/user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatMenu, MatMenuModule, MatIconModule, MatListModule} from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { WallComponent } from './wall/wall.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     LoginComponent,
     AdminComponent,
     HomeComponent,
-    UserComponent
+    UserComponent,
+    WallComponent
   
   ],
   imports: [
