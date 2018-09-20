@@ -10,6 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatMenu, MatMenuModule, MatIconModule, MatListModule} from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { WallComponent } from './wall/wall.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: LoginComponent }
+ 
+];
 
 
 @NgModule({
@@ -28,8 +34,8 @@ import { WallComponent } from './wall/wall.component';
     MatMenuModule,
     MatIconModule,
     MatListModule,
-    NgbModule
-
+    NgbModule,
+  RouterModule.forRoot(appRoutes)
     ],
   providers: [],
   bootstrap: [AppComponent]
