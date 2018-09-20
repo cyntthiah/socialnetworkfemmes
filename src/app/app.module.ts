@@ -39,8 +39,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     NgbModule,
-  RouterModule.forRoot(appRoutes)
-  // AngularFireModule.initializeApp(environment.firebase),
+  RouterModule.forRoot(appRoutes),
+  AngularFireModule.initializeApp(environment.firebase),
     ],
   
   // providers: [AuthService],
