@@ -19,7 +19,7 @@ import { WallComponent } from './wall/wall.component';
 import {RouterModule, Routes} from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', component: WallComponent }
+  { path: '', component: LoginComponent }
 ];
 
 
