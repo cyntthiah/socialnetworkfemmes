@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-//firebase
+// firebase
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -18,8 +19,7 @@ import { WallComponent } from './wall/wall.component';
 import {RouterModule, Routes} from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent }
- 
+  { path: '', component: WallComponent }
 ];
 
 
@@ -31,7 +31,6 @@ const appRoutes: Routes = [
     HomeComponent,
     UserComponent,
     WallComponent
-  
   ],
   imports: [
     BrowserModule,
@@ -43,8 +42,8 @@ const appRoutes: Routes = [
     AngularFireAuthModule,
   RouterModule.forRoot(appRoutes),
   AngularFireModule.initializeApp(environment.firebase),
+  HttpModule
     ],
-  
   // providers: [AuthService],
   bootstrap: [AppComponent]
 })
