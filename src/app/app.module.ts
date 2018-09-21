@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 //firebase
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     NgbModule,
+    AngularFireAuthModule,
   RouterModule.forRoot(appRoutes),
   AngularFireModule.initializeApp(environment.firebase),
     ],
