@@ -17,9 +17,20 @@ import {MatButtonModule, MatCheckboxModule, MatMenu, MatMenuModule, MatIconModul
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { WallComponent } from './wall/wall.component';
 import {RouterModule, Routes} from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { SectionComponent } from './components/section/section.component';
+import { ImgUserComponent } from './components/img-user/img-user.component';
+import { InfoComponent } from './info/info.component';
+import { FriendsComponent } from './friends/friends.component';
+import { PicturesComponent } from './pictures/pictures.component';
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent }
+  { path: '', component: LoginComponent },
+//  { path: 'main', component: MainComponent },
+//  { path: 'wall', component: WallComponent },
+//  { path: 'info', component: InfoComponent },
+//  { path: 'friends', component: FriendsComponent },
+//  { path: 'pictures', component: PicturesComponent }
 ];
 
 
@@ -30,7 +41,13 @@ const appRoutes: Routes = [
     AdminComponent,
     HomeComponent,
     UserComponent,
-    WallComponent
+    WallComponent,
+    MainComponent,
+    SectionComponent,
+    ImgUserComponent,
+    InfoComponent,
+    FriendsComponent,
+    PicturesComponent
   ],
   imports: [
     BrowserModule,
