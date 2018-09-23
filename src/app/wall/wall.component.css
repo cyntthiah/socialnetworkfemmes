@@ -1,0 +1,11 @@
+.btnwall {
+  background-color: #d4145a;
+  color: white;
+  margin-top: 2%;
+}
+
+@media only screen and (max-width: 768px){
+  .btnwall{
+      width: 100%;
+}
+}
