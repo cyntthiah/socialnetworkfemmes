@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -15,26 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {AuthService} from './auth.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
-
-const appRoutes: Routes = [ // ruta + componente
-  {
-    path : 'login', // si no pone nada es la ruta principal
-    component : LoginComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'wall',
-    component: WallComponent
-  },
-  {
-    path: 'main',
-    component: MainComponent
-  }
-];
-
 
 // Componentes Red Social
 import { AdminComponent } from './admin/admin.component';
@@ -69,7 +48,6 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
     AppRoutingModule, // ruta
   ],
   providers: [AuthService],
