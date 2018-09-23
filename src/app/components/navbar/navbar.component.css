@@ -1,0 +1,145 @@
+
+header nav {
+  background: #722d91; 
+  background: -moz-linear-gradient(left, #722d91 0%, #d4145a 100%); 
+  background: -webkit-linear-gradient(left, #722d91 0%,#d4145a 100%); 
+  background: linear-gradient(to right, #722d91 0%,#d4145a 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#722d91', endColorstr='#d4145a',GradientType=1 ); 
+  }
+  
+  /* LOGOTIPO */
+  #menu img {
+      width: 20%;
+  }
+  #menu a {
+      color: aliceblue;
+  }
+  #menu #ir {
+      background: #722d91;
+      border: 0px;
+      color: aliceblue;
+  }
+  
+  /* ROW DE FOTO Y NOMBRE */
+  #box1 {
+      width: 100%;
+      height: 250px;  
+  }
+  #box1 #editar i{
+      color: #722d91;
+      border: 0px;
+  } 
+  
+  /* FOTO PERFIL */
+  #box1 img { 
+      width: 170px;
+      height: 170px; 
+      margin-top: 10%; 
+      margin-bottom: 10%; 
+  }
+   /* contenedor de amigos,informacion,fotos */
+  #box3 {
+      width: 100%;
+      height: 50px;
+      font-weight: 100;
+      background: #d4145a;
+  }
+  #box3 a{
+     color: #fcebfa;
+  }
+  #vacio {
+      width: 100%;
+      height: 20px;
+  }
+  #boxAmigos {
+      width: 100%;
+      height: 400px;;
+      background: white;
+      /* visibility: */
+  }
+  
+  #boxAmigos h3{
+      color: #722d91;
+      text-align: center;
+      margin-top: 5%;
+      font-size: 20px;
+      padding: 1em; 
+  }
+  
+  #fotosAmigos {
+      margin: auto;
+  }
+  
+  
+  /* PUBLICACIONES */
+  #box5 {
+      background: #f5dee6;
+  }
+  #box5 #publicacion{
+      width: 90%;
+      height: 100px; 
+      margin-top: 5%; 
+      margin-bottom: 5%; 
+      border: 1px solid #722d91;
+  }
+  #box5 #tash{
+      color: #722d91;
+      margin-top: 2%; 
+  }
+  
+  #box5 #meGusta{
+      width: 15%;
+      color: #722d91;
+      margin-bottom: 2%; 
+  }
+  
+  #box5 #comentario{
+      margin-left: 20px;
+      width: 15%;
+      color: #722d91;
+      margin-bottom: 2%; 
+  }
+  #box5 #publica{
+      margin-bottom: 2%; 
+      color: aliceblue;
+      background: #722d91;
+  }
+  
+  
+  #inputFile1 {
+      display: block;
+      margin: auto;
+      color: #e19feb; 
+  }
+  
+  @media screen and (max-width:800px ) {
+      /* logotipo */
+      #menu img {
+          width: 40%;
+      }
+      /* contenedor de foto de perfil y nombre */
+      #box1 {
+          width: 100%;
+          height: 100px;  
+      }
+      /* foto perfil*/
+      #box1 img { 
+          width: 100px;
+          height: 100px; 
+          margin-bottom: 10%; 
+          margin-top: 10%;  
+      }
+      #box3 {
+          width: 100%;
+          height: 30px;
+          font-weight: 100;
+          background: #d4145a;
+         
+      }
+      #box3 a{
+          font-size: 15px;
+          padding: 2px;
+          color: aliceblue;
+         
+       }
+  }

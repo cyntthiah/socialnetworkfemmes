@@ -1,0 +1,18 @@
+<!-- Perfil / Menu -->
+<header id="menu">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img src="..\src\app\img\logoBlanco.png" alt="">        
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+          <a class="nav-item nav-link active text-right" href="#" routerLink="/friends">Amigos</a>
+          <a class="nav-item nav-link active text-right" href="#" routerLink="/info">Info</a>
+          <a class="nav-item nav-link active text-right" href="#" routerLink="/home" >Muro</a>
+          <a class="nav-item nav-link active text-right" href="#" routerLink="/pictures">Fotos</a>
+         <!--  <div *ngIf="(authService.user | async)"> -->
+            <a class="nav-item nav-link text-right" href="#" (click)="onLogout()">Logout</a>
+          <!-- </div> -->
+        </div>
+      </div>

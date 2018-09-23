@@ -15,6 +15,9 @@ import {AuthService} from './auth.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 
+// database
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 // Componentes Red Social
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
@@ -27,6 +30,7 @@ import { InfoComponent } from './info/info.component';
 import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,7 @@ import { AppRoutingModule } from './app-routing.module';
     InfoComponent,
     FriendsComponent,
     PicturesComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,7 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireAuthModule,
     ReactiveFormsModule,
     AppRoutingModule, // ruta
+    AngularFireDatabaseModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

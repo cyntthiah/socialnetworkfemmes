@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-// import {AuthService} from '../auth.service';
-@Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
-})
-export class UserComponent implements OnInit {
+import {AuthService} from '../../auth.service';
 
+@Component({
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
+})
+export class NavbarComponent implements OnInit {
   constructor(
- //   private authService: AuthService,
+    private authService: AuthService,
   ) { }
 
   ngOnInit() {
   }
-/*
+
   onLogout() {
     this.authService.logout()
       .then(() => {
@@ -23,5 +23,5 @@ export class UserComponent implements OnInit {
 
         alert('Algo salio mal');
       });
-  }*/
+  }
 }
