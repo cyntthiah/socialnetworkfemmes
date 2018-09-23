@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {AuthService} from '../auth.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -77,7 +76,6 @@ export class LoginComponent implements OnInit {
       alert('Exito');
     })
     .catch(() => {
-
       alert('Algo salio mal');
     });
   }
