@@ -29,6 +29,7 @@ import { ImgUserComponent } from './components/img-user/img-user.component';
 import { InfoComponent } from './info/info.component';
 import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
+import { AppRoutingModule } from './app-routing.module';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes), // ruta
+    RouterModule.forRoot(appRoutes),
+    AppRoutingModule, // ruta
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
