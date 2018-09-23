@@ -69,5 +69,16 @@ export class LoginComponent implements OnInit {
       alert("Algo salio mal");
     });
   }
+  doGoogle(){
+    this.authService.conGoogle()
+    .then(() => {
+
+      alert("Exito");
+    })
+    .catch(() => {
+ 
+      alert("Algo salio mal");
+    });
+  }  
 }
 

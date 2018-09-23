@@ -30,6 +30,10 @@ export class AuthService {
   conFacebook(){
     return this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
+
+  conGoogle(){
+    return this.firebaseAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  }
 }
 
 
