@@ -1,22 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
-
-// firebase
-import { AngularFireModule } from '@angular/fire';
-import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppComponent } from './app.component';
+
+// Firebase
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+
+// form
+import { ReactiveFormsModule } from '@angular/forms';
+
+// auth
+import {AuthService} from './auth.service';
+import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
+
+// Router
+import { RouterModule, Routes } from '@angular/router';
+
+// Componentes Red Social
 import { AdminComponent } from './admin/admin.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatMenu, MatMenuModule, MatIconModule, MatListModule} from '@angular/material';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { WallComponent } from './wall/wall.component';
-import {RouterModule, Routes} from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { SectionComponent } from './components/section/section.component';
 import { ImgUserComponent } from './components/img-user/img-user.component';
@@ -25,15 +31,12 @@ import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
 
 const appRoutes: Routes = [
-  { path: '', component: LoginComponent },
-//  { path: 'main', component: MainComponent },
-//  { path: 'wall', component: WallComponent },
-//  { path: 'info', component: InfoComponent },
-//  { path: 'friends', component: FriendsComponent },
-//  { path: 'pictures', component: PicturesComponent }
+  { path: 'main', component: MainComponent },
+  { path: 'wall', component: WallComponent },
+  { path: 'info', component: InfoComponent },
+  { path: 'friends', component: FriendsComponent },
+  { path: 'pictures', component: PicturesComponent }
 ];
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,29 +50,16 @@ const appRoutes: Routes = [
     ImgUserComponent,
     InfoComponent,
     FriendsComponent,
-    PicturesComponent
+    PicturesComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatMenuModule,
-    MatIconModule,
-    MatListModule,
-    NgbModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-  RouterModule.forRoot(appRoutes),
-  AngularFireModule.initializeApp(environment.firebase),
-  HttpModule
-    ],
-  // providers: [AuthService],
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes), // ruta
+  ],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class PizzaPartyAppModule { }
-export class NgbdButtonsCheckbox {
-  model = {
-    left: true,
-    middle: false,
-    right: false
-  };
-}
