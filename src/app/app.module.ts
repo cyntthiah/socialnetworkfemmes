@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -16,25 +15,8 @@ import {AuthService} from './auth.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 
-const appRoutes: Routes = [ // ruta + componente
-  {
-    path : 'login',//si no pone nada es la ruta principal
-    component : LoginComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: 'wall',
-    component: WallComponent
-  },
-  {
-    path: 'main',
-    component: MainComponent
-  }
-];
-  
+// database
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 // Componentes Red Social
 import { AdminComponent } from './admin/admin.component';
@@ -47,6 +29,8 @@ import { ImgUserComponent } from './components/img-user/img-user.component';
 import { InfoComponent } from './info/info.component';
 import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -62,13 +46,15 @@ import { PicturesComponent } from './pictures/pictures.component';
     InfoComponent,
     FriendsComponent,
     PicturesComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes), // ruta
+    AppRoutingModule, // ruta
+    AngularFireDatabaseModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

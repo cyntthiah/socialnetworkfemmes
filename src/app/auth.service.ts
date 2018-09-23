@@ -8,33 +8,34 @@ import { auth } from 'firebase';
 })
 export class AuthService {
   user: Observable<firebase.User>;
-  constructor(private firebaseAuth:AngularFireAuth) { 
+  constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
   }
-  signup(email:string, password:string){
+  signup(email: string, password: string) {
     return this.firebaseAuth
       .auth
       .createUserWithEmailAndPassword(email, password);
   }
 
-  login(email:string, password:string){
+  login(email: string, password: string) {
     return this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(email, password);
   }
 
-  logout(){
-    return this.firebaseAuth.auth.signOut()
+  logout() {
+    return this.firebaseAuth.auth.signOut();
   }
 
-  conFacebook(){
+  conFacebook() {
     return this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 
-  conGoogle(){
+  conGoogle() {
     return this.firebaseAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 }
+
 
 
 

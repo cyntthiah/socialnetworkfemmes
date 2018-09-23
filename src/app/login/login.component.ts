@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {AuthService} from '../auth.service';
-
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +11,10 @@ import {AuthService} from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   authForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {
+  constructor(
+    public router: Router,
+    private formBuilder: FormBuilder,
+    private authService: AuthService) {
     this.createAuthForm();
   }
 
@@ -26,59 +29,57 @@ export class LoginComponent implements OnInit {
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-    
-        alert("Registro con exito");
+        alert('Registro con exito');
       })
       .catch(() => {
-        
-        alert("Algo salio mal");
+
+        alert('Algo salio mal');
       });
   }
   onLogin() {
     this.authService.login(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-      
-        alert("Login Con exito");
+        this.router.navigate(['/home']);
+        alert('Login Con exito');
       })
       .catch(() => {
 
-        alert("Algo Salio mal");
+        alert('Algo Salio mal');
       });
   }
-
+/*
   onLogout() {
     this.authService.logout()
       .then(() => {
-
-        alert("Adiosin");
+        alert('Adiosin');
       })
       .catch(() => {
-   
-        alert("Algo salio mal");
+
+        alert('Algo salio mal');
       });
   }
-
-  doFace(){
+*/
+  doFace() {
     this.authService.conFacebook()
     .then(() => {
 
-      alert("Exito");
+      alert('Exito');
     })
     .catch(() => {
- 
-      alert("Algo salio mal");
+
+      alert('Algo salio mal');
     });
   }
-  doGoogle(){
+  doGoogle() {
     this.authService.conGoogle()
     .then(() => {
-
-      alert("Exito");
+      this.router.navigate(['/home']);
+      alert('Exito');
     })
     .catch(() => {
- 
-      alert("Algo salio mal");
+
+      alert('Algo salio mal');
     });
-  }  
+  }
 }
 

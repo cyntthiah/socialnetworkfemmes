@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-  constructor() { }
+  constructor( // public authService: AuthService
+    ) { }
 
   ngOnInit() {
   }
