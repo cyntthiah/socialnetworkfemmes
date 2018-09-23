@@ -1,41 +1,13 @@
-
-  <div id="boxLogin"><!-- LOGIN -->
-    <div class="container text-center"> 
-      <div class="row">
-         <div class="col-12 col-md-12">
-           <img src="..\src\app\img\logoFemmesText.png" alt="logotipo">  
-              <h1>SIGN IN</h1>
-                 <div class="logearse">
-                    <div class="row">
-                       <div id="facebook" class="col-6"><!-- LINKEAR FACEBOOK -->
-                         <a href="#" id="facebookButton"class="btn btn-lg btn-block omb_btn-facebook">
-                         <i class="fab fa-facebook-f rounded-circle"></i></a>
-                       </div>
-                         <div id="google" class="col-6"><!-- LINKEAR GOOGLE -->
-                             <a href="#" class="btn btn-lg btn-block omb_btn-google">
-                             <i class="fab fa-google rounded-circle"></i></a>
-                         </div>
-                   </div>
-               </div>	
-           <div class="ingresa"><!-- INGRESA CON CORREO-->
-               <form action="" class="">          
-                 <div class="input-group"> <!--Correo electronico--> 
-                    <span class="input-group-addon"></span>
-                       <input id="email" type="text" class="form-control" name="username" placeholder="email address">
-                          </div>            
-                             <div class="input-group"><!--Contraseña-->
-                                <span class="input-group-addon"></span>
-                                   <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-                             </div>
-                       <button id="loginButton" onclick="loginWithFirebase()" class="btn text-center justify-center" type="submit">Ingresar</button><!--Ingresa-->
-               </form>
-            </div>
-                       <h4>¿Olvidaste tu contraseña?</h4>
-                       <input id="registerButton" onclick="registerWithFirebase()" type="button" value="REGISTER" class="btn btn-success"><h5>¿NO TIENES CUENTA? REGÍSTRATE</h5>
-           </div>  
-       </div>
-   </div>
+<!--ngIf desaparecerá lo que esta dentro del div-->
+<div *ngIf="authService.user | async">
+  <p>Bienvenido : {{((authService.user | async) || {}).email}}</p>
+  <button type="button" (click)="onLogout()">Logout</button>
 </div>
-
-
-
+<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+  <input type="email" formControlName="email">
+  <input type="password" formControlName="password">
+  <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+  <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
+  <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
+  <!--Ejecutará onLogin-->
+</form>
