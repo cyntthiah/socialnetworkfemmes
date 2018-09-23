@@ -26,22 +26,22 @@ export class LoginComponent implements OnInit {
   onRegister() {
     this.authService.signup(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-        //Registro exitoso, celebremos esto!
+    
         alert("Registro con exito");
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
+        
         alert("Algo salio mal");
       });
   }
   onLogin() {
     this.authService.login(this.authForm.value.email, this.authForm.value.password)
       .then(() => {
-        //Login exitoso, así que celebramos con el usuario (?)
+      
         alert("Login Con exito");
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
+
         alert("Algo Salio mal");
       });
   }
@@ -49,11 +49,11 @@ export class LoginComponent implements OnInit {
   onLogout() {
     this.authService.logout()
       .then(() => {
-        //Logout exitoso, adios usuario!
-        alert("Te juiste");
+
+        alert("Adiosin");
       })
       .catch(() => {
-        //Algo salió mal, avisemos mejor para que reintente
+   
         alert("Algo salio mal");
       });
   }
