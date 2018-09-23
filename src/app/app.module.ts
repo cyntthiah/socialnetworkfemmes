@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { RouterModule, Routes } from '@angular/router';
 //Firebase
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
@@ -15,6 +16,14 @@ import {AuthService} from './auth.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 
+const appRoutes: Routes = [ // ruta + componente
+  {
+    path : '',//si no pone nada es la ruta principal
+    component : LoginComponent
+  },
+
+]
+
 
 @NgModule({
   declarations: [
@@ -25,9 +34,10 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+ export class AppModule { }
