@@ -57,5 +57,17 @@ export class LoginComponent implements OnInit {
         alert("Algo salio mal");
       });
   }
+
+  doFace(){
+    this.authService.conFacebook()
+    .then(() => {
+
+      alert("Exito");
+    })
+    .catch(() => {
+ 
+      alert("Algo salio mal");
+    });
+  }
 }
 

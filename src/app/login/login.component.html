@@ -32,8 +32,11 @@
                        </div>
                  </div>
              </div>	
+             <div *ngIf="authService.user | async">
+                <button type="button" (click)="onLogout()">Logout</button>
+                </div>
          <div class="ingresa"><!-- INGRESA CON CORREO-->
-             <form [formGroup]="authForm">          
+             <form [formGroup]="authForm" *ngIf="!(authService.user | async)">          
                <div class="input-group"> <!--Correo electronico--> 
                   <span class="input-group-addon"></span>
                      <input id="email"  class="form-control"  formControlName="email" placeholder="email address">
@@ -46,7 +49,8 @@
              </form>
           </div>
                      <h4>¿Olvidaste tu contraseña?</h4>
-                     <input id="registerButton" (click)="onRegister()" type="button" value="REGISTER" [disabled]="!authForm.valid"><h5>¿NO TIENES CUENTA? REGÍSTRATE</h5>
+                     <input id="registerButton" (click)="onRegister()" type="button" value="REGISTER" [disabled]="!authForm.valid"><h5>¿NO TIENES CUENTA? REGÍSTRATE</h5><br>
+                     <button id="Facebutton" (click)="doFace()" class="btn text-center justify-center" type="button" >Facebook</button>
          </div>  
      </div>
  </div>

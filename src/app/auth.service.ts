@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
+import { auth } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +25,10 @@ export class AuthService {
 
   logout(){
     return this.firebaseAuth.auth.signOut()
+  }
+
+  conFacebook(){
+    return this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
   }
 }
 
