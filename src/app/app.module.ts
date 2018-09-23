@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -30,7 +31,13 @@ import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MainComponent } from './components/main/main.component'
+import { MainComponent } from './components/main/main.component';
+
+// Post
+import { PostListComponent } from './components/posts/post-list/post-list.component';
+import { PostComponent } from './components/posts/post/post.component';
+import { PostService } from '../app/services/post.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +53,8 @@ import { MainComponent } from './components/main/main.component'
     FriendsComponent,
     PicturesComponent,
     NavbarComponent,
+    PostListComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,9 +62,13 @@ import { MainComponent } from './components/main/main.component'
     AngularFireAuthModule,
     ReactiveFormsModule,
     AppRoutingModule, // ruta
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
  export class AppModule { }
