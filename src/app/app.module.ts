@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -15,8 +16,25 @@ import {AuthService} from './auth.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 
-// Router
-import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [ // ruta + componente
+  {
+    path : 'login', // si no pone nada es la ruta principal
+    component : LoginComponent
+  },
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'wall',
+    component: WallComponent
+  },
+  {
+    path: 'main',
+    component: MainComponent
+  }
+];
+
 
 // Componentes Red Social
 import { AdminComponent } from './admin/admin.component';
@@ -31,13 +49,6 @@ import { FriendsComponent } from './friends/friends.component';
 import { PicturesComponent } from './pictures/pictures.component';
 import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: 'main', component: MainComponent },
-  { path: 'wall', component: WallComponent },
-  { path: 'info', component: InfoComponent },
-  { path: 'friends', component: FriendsComponent },
-  { path: 'pictures', component: PicturesComponent }
-];
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,4 +75,4 @@ const appRoutes: Routes = [
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+ export class AppModule { }
