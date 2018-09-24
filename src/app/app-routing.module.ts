@@ -5,9 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { InfoComponent } from './info/info.component';
 
-const appRoutes: Routes = [ // ruta + componente
+const appRoutes: Routes = [ 
   {
-    path : '', // si no pone nada es la ruta principal
+    path : '', 
     component : LoginComponent
   },
   {

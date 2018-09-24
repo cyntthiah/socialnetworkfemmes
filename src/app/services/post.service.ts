@@ -10,8 +10,8 @@ export class PostService {
   selectPost: Post = new Post();
   constructor(private firebase: AngularFireDatabaseModule) { }
 
-  // getPost() {
-  //  return this.postList = this.firebase.list('posts');
+  // getPost() { list no existe en esta version
+  //   return this.postList = this.firebase.list('posts');
   // }
   insertPost(post: Post) {
     this.postList.push({
