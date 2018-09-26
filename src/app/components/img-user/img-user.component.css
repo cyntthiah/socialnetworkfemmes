@@ -7,14 +7,15 @@
   margin-top: -80px;
 }
 
-        @media screen and (max-width:800px ) {
-          .userImg{
-            width: 120;
-            height: 120;
-            margin-left: 5%;
-            z-index: 100;
-            position: absolute;
-            margin-top: -60px;
-          }
         
-      }
+@media screen and (max-width:800px ) {
+  .userImg{
+    width: 120;
+    height: 120;
+    margin-left: 5%;
+    z-index: 100;
+    position: absolute;
+    margin-top: -60px;
+  }
+        
+}

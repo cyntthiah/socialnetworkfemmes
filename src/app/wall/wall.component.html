@@ -5,14 +5,11 @@
         <!-- Caja de comentarios -->
         <div class="card">
           <div class="card-body">
-            <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+            <form>
             <div class="form-group">
             <textarea 
             class="form-control" 
             type="text" 
-            name="postUser"
-            #postUser = "ngModel"
-            [(ngModel)]="postService.selectPost.postUser"
             placeholder="¿Qué estás pensando?"></textarea>
             <!-- #post user referencia  -->
           </div>
