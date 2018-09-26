@@ -5,18 +5,17 @@
         <!-- Caja de comentarios -->
         <div class="card">
           <div class="card-body">
-            <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+        
             <div class="form-group">
             <textarea 
             class="form-control" 
             type="text" 
-            name="postUser"
-            #postUser = "ngModel"
-            [(ngModel)]="postService.selectPost.postUser"
+        
+          
             placeholder="¿Qué estás pensando?"></textarea>
             <!-- #post user referencia  -->
           </div>
-          </form>
+          
             <button class="btnwall btn-light">publicar</button>
           </div>
         </div>

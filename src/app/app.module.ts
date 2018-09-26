@@ -33,10 +33,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 
-// Post
-import { PostListComponent } from './components/posts/post-list/post-list.component';
-import { PostComponent } from './components/posts/post/post.component';
-import { PostService } from '../app/services/post.service';
 
 @NgModule({
   declarations: [
@@ -53,8 +49,7 @@ import { PostService } from '../app/services/post.service';
     FriendsComponent,
     PicturesComponent,
     NavbarComponent,
-    PostListComponent,
-    PostComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -67,7 +62,7 @@ import { PostService } from '../app/services/post.service';
   ],
   providers: [
     AuthService,
-    PostService
+  
   ],
   bootstrap: [AppComponent]
 })
