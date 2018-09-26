@@ -12,8 +12,8 @@ export class LoginComponent implements OnInit {
   authForm: FormGroup;
   constructor(
     public router: Router,
-    private formBuilder: FormBuilder,
-    private authService: AuthService) {
+    public formBuilder: FormBuilder,
+    public authService: AuthService) {
     this.createAuthForm();
   }
 

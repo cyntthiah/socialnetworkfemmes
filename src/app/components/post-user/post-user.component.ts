@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post-user',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-user.component.css']
 })
 export class PostUserComponent implements OnInit {
-
+  @Input() commentary: string;
   constructor() { }
 
   ngOnInit() {
