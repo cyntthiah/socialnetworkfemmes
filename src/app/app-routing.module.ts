@@ -5,9 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { InfoComponent } from './info/info.component';
 
-const appRoutes: Routes = [ 
+const appRoutes: Routes = [
   {
-    path : '', 
+    path : '',
     component : LoginComponent
   },
   {
