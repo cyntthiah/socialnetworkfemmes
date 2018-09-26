@@ -5,18 +5,17 @@
         <!-- Caja de comentarios -->
         <div class="card">
           <div class="card-body">
-        
-            <div class="form-group">
-            <textarea 
-            class="form-control" 
-            type="text" 
-        
-          
-            placeholder="¿Qué estás pensando?"></textarea>
-            <!-- #post user referencia  -->
-          </div>
-          
-            <button class="btnwall btn-light">publicar</button>
+            <form [formGroup]="postForm" (ngSubmit)="addPost()">
+              <div class="form-group">
+                <textarea 
+                style="width:100%;"
+                #commentary type="text" formControlName="commentary"
+                placeholder="¿Qué estás pensando?"></textarea>
+                <!-- #post user referencia  -->
+              </div>
+              
+                <button class="btnwall btn-light">publicar</button>
+            </form>
           </div>
         </div>
       </div>
