@@ -37,6 +37,7 @@ import { MainComponent } from './components/main/main.component';
 import { PostListComponent } from './components/posts/post-list/post-list.component';
 import { PostComponent } from './components/posts/post/post.component';
 import { PostService } from '../app/services/post.service';
+import { PostUserComponent } from './components/post-user/post-user.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { PostService } from '../app/services/post.service';
     NavbarComponent,
     PostListComponent,
     PostComponent,
+    PostUserComponent,
   ],
   imports: [
     BrowserModule,
