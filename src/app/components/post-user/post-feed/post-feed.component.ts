@@ -15,5 +15,4 @@ export class PostFeedComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
