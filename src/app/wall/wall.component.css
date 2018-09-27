@@ -1,8 +1,17 @@
-.btnwall {
+button {
   background-color: #d4145a;
   color: white;
-  margin-top: 2%;
 }
+
+button:honver {
+    background-color: #d4145a;
+    color: white;
+}
+
+a {
+  color: #d4145a;
+}
+
 
 @media only screen and (max-width: 768px){
   .btnwall{

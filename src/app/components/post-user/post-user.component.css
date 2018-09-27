@@ -5,6 +5,16 @@
   margin-bottom : 5px;
 }
 
-.fas .fa-heart {
+a {
+  color: #d4145a;
+}
+
+.fa-heart .fa-comment .fa-clock {
+  color: gray;
+}
+
+.fa-star:focus,
+.fa-star:hover,
+.fa-star:active {
   color: #d4145a;
 }
