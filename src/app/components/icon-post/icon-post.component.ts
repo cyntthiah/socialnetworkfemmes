@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { PostFeedComponent } from '../post-user/post-feed/post-feed.component';
+
 
 @Component({
   selector: 'app-icon-post',
@@ -6,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon-post.component.css']
 })
 export class IconPostComponent implements OnInit {
+  @Input() idPost;
+  constructor(private database: AngularFireDatabase) { }
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  deletePost(keyPost) {
+    this.database.object(`post/${keyPost}`).remove();
   }
+
 
 }

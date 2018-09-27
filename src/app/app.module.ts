@@ -36,7 +36,6 @@ import { PostUserComponent } from './components/post-user/post-user.component';
 import { PostFeedComponent } from './components/post-user/post-feed/post-feed.component';
 import { IconPostComponent } from './components/icon-post/icon-post.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

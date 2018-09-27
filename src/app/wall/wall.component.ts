@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-wall',
@@ -26,11 +27,14 @@ export class WallComponent implements OnInit {
 
   addPost() {
     const newPost = {
-      commentary: this.postForm.value.commentary
+      commentary: this.postForm.value.commentary,
+      counter: 0
     };
-
     this.postList$.push(newPost);
     this.postForm.reset();
   }
 
+  deletePost(postKey) {
+    this.database.list(`posts/${postKey}`).remove();
+  }
 }

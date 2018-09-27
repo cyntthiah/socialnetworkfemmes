@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./post-user.component.css']
 })
 export class PostUserComponent implements OnInit {
-  @Input() name: string;
   @Input() commentary: string;
+  @Input() idPost: any;
+
   constructor() { }
 
   ngOnInit() {

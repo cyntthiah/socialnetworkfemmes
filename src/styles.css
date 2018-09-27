@@ -4,6 +4,10 @@ html, body { height: 100%; }
 body { 
   margin: 0; 
   font-family: 'Roboto', sans-serif; 
-  background-color: #f9dfec;
+  background-image: url('./assets/img/76.jpg');
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
 }
 
