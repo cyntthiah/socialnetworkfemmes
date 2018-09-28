@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   onLogout() {
     this.authService.logout()
       .then(() => {
-        alert('Adiosin');
+        
       })
       .catch(() => {
 

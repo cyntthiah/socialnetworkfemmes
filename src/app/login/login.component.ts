@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {AuthService} from '../auth.service';
 import { Router } from '@angular/router';
+import { async } from 'q';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
   createAuthForm() {
     this.authForm = this.formBuilder.group({
@@ -61,7 +63,7 @@ export class LoginComponent implements OnInit {
   doFace() {
     this.authService.conFacebook()
     .then(() => {
-
+      this.router.navigate(['/home']);
       alert('Exito');
     })
     .catch(() => {

@@ -11,9 +11,7 @@
                    
                 </div>
             </div>
-            <div *ngIf="authService.user | async">
-                <button type="button" (click)="onLogout()">Logout</button>
-            </div>
+            
             <div class="ingresa">
                 <!-- INGRESA CON CORREO-->
                 <form [formGroup]="authForm" *ngIf="!(authService.user | async)">
