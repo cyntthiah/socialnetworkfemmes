@@ -1,26 +1,9 @@
 .BtnSection {
   color: #d4145a;
   text-align: center;
+  width: 100px ;
 }
 
 .btnSectionGroup {
  margin-top: 10%;
-}
-
-@media screen and (max-width:64em ) {
-  .BtnSection {
-    font-size: 90%;
-  }
-}
-
-@media screen and (max-width: 50em) {
-  .BtnSection {
-    font-size: 75%;
-  }
- }
-
-@media screen and (max-width:30em ) {
-  .BtnSection {
-    font-size: 75%;
-  }
 }
