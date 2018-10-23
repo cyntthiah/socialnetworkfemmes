@@ -34,7 +34,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainComponent } from './components/main/main.component';
 import { PostUserComponent } from './components/post-user/post-user.component';
 import { PostFeedComponent } from './components/post-user/post-feed/post-feed.component';
-import { IconPostComponent } from './components/icon-post/icon-post.component';
+
 
 @NgModule({
   declarations: [
@@ -52,8 +52,7 @@ import { IconPostComponent } from './components/icon-post/icon-post.component';
     PicturesComponent,
     NavbarComponent,
     PostUserComponent,
-    PostFeedComponent,
-    IconPostComponent
+    PostFeedComponent
   ],
   imports: [
     BrowserModule,
